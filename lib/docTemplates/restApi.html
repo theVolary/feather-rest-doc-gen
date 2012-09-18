@@ -1,0 +1,38 @@
+<div id="rest-api" class="accordion-group">
+  <h3 id="api-name" class="according-heading">
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#doc-container" href="#api-doc-container-${name}">/_rest/${name}</a>
+  </h3>
+  <div id="api-doc-container-${name}" class="accordion-body collapse in">
+    {{each(epIndex, endpoint) endpoints}}
+    <div class="accordion-inner">
+      <div class="method">
+        <span class="label label-${endpoint.verbLabel}">${endpoint.verb}</span>
+        <span>${endpoint.uri}</span>
+        <div class="pull-right">${endpoint.description}</div>
+      </div>
+      <div class="details container" style="margin-bottom: 10px">
+        <div class="row">
+          <span class="span2 label">Nickname</span>
+          <span class="span9">${endpoint.nickname}</span>
+        </div>
+        {{if endpoint.notes}}
+        <div class="row">
+          <span class="span2 label">Notes</span>
+          <span class="span9">${endpoint.notes}</span>
+        </div>
+        {{/if}}
+        {{if endpoint.parameters}}
+        <div class="row">
+          <span class="span2 label">Parameters</span>
+          <span class="span9">
+            {{each(index, param) endpoint.parameters.qs}}
+              ${param.name} ${param.description}
+            {{/each}}
+          </span>
+        </div>
+        {{/if}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
