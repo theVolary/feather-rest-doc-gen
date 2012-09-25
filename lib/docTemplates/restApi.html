@@ -5,7 +5,7 @@
   <div id="api-doc-container-${name}" class="accordion-body collapse in">
     {{each(epIndex, endpoint) endpoints}}
     <div class="accordion-inner">
-      <div class="method">
+      <div class="method alert alert-${endpoint.verbLabel}">
         <span class="label label-${endpoint.verbLabel}">${endpoint.verb}</span>
         <span>${endpoint.uri}</span>
         <div class="pull-right">${endpoint.description}</div>
