@@ -15,5 +15,8 @@
   },
   "scripts": {
     "test": "node_modules/mocha/bin/mocha"
+  },
+  "bin": {
+    "rest-doc-gen": "./bin/gen-rest-doc.js"
   }
 }
