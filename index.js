@@ -4,6 +4,8 @@ module.exports = {
 
   generateHtml: function(options, cb) {
     var restDocs = require("./lib/restDocs");
+    var destFile = options.destFile || (options.destDir + "/" + options.schema.name + ".html");
+    
     restDocs.init(function(templates) {
       var jsdom = require("jsdom");
       jsdom.env({
@@ -16,8 +18,8 @@ module.exports = {
           var document = window.document,
               $ = window.jQuery;
           $.tmpl(templates.restApi, options.schema).appendTo($('#doc-container'));
-          console.log("writing file to " + options.destDir + "/" + options.schema.name + ".html");
-          fs.writeFileSync(options.destDir + "/" + options.schema.name + ".html", document.innerHTML);
+          console.log("writing file to " + destFile);
+          fs.writeFileSync(destFile, document.innerHTML);
           cb(errors ? errors : null);
         }
       });
