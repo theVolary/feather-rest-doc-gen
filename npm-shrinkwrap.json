@@ -1,9 +1,37 @@
 {
-  "name": "feather-rest-doc-gen",
-  "version": "0.1.0",
   "dependencies": {
-    "underscore": {
-      "version": "1.3.1"
+    "cli": {
+      "version": "0.4.4-2",
+      "dependencies": {
+        "glob": {
+          "version": "3.1.12",
+          "dependencies": {
+            "minimatch": {
+              "version": "0.2.6",
+              "dependencies": {
+                "lru-cache": {
+                  "version": "2.0.4"
+                }
+              }
+            },
+            "graceful-fs": {
+              "version": "1.1.14"
+            },
+            "inherits": {
+              "version": "1.0.0"
+            }
+          }
+        }
+      }
+    },
+    "feather-rest-descriptor": {
+      "version": "0.1.0",
+      "from": "git+ssh://git@github.com:theVolary/feather-rest-descriptor.git",
+      "dependencies": {
+        "colorize": {
+          "version": "0.1.0"
+        }
+      }
     },
     "jsdom": {
       "version": "0.2.15",
@@ -48,9 +76,6 @@
         }
       }
     },
-    "should": {
-      "version": "1.1.0"
-    },
     "mocha": {
       "version": "1.4.2",
       "dependencies": {
@@ -78,6 +103,12 @@
           "version": "0.3.3"
         }
       }
+    },
+    "should": {
+      "version": "1.1.0"
+    },
+    "underscore": {
+      "version": "1.3.1"
     }
   }
 }
