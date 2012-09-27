@@ -11,10 +11,12 @@
         <div class="pull-right">${endpoint.description}</div>
       </div>
       <div class="details container" style="margin-bottom: 10px">
+        {{if endpoint.nickname}}
         <div class="row">
           <span class="span2 label">Nickname</span>
           <span class="span9">${endpoint.nickname}</span>
         </div>
+        {{/if}}
         {{if endpoint.notes}}
         <div class="row">
           <span class="span2 label">Notes</span>
