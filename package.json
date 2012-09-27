@@ -1,6 +1,6 @@
 {
   "name": "feather-rest-doc-gen",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A library that generates formatted output from a meta-data schema for feather rest files.",
   "author": "Steve Krenek <steve@thevolary.com>",
   "repository": { "type": "git", "url": "git://github.com/theVolary/feather-rest-doc-gen.git" },
